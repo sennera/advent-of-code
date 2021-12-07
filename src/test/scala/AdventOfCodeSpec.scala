@@ -54,4 +54,30 @@ class AdventOfCodeSpec extends UnitSpec {
     val fileLines = readFileLines("sampleInput3.1.txt")
     println("Answer: " + Day3.find2(fileLines))
   }
+
+  "Day4 Part #1" should "return answer" in {
+    val fileLines = readFileLines("input4.1.txt")
+    val fileLines2 = readFileLines("input4.1.2.txt")
+    println("Answer: " + Day4.find1(fileLines, fileLines2))
+  }
+
+  "Day4 Part #1 sample" should "return answer" in {
+    val fileLines = readFileLines("sInput4.1.txt")
+    val fileLines2 = readFileLines("sInput4.1.2.txt")
+    println("Answer: " + Day4.find1(fileLines, fileLines2))
+  }
+
+  // 2592 too low
+  // 8978 too low , 134 67
+  "Day4 Part #2" should "return answer" in {
+    val fileLines = readFileLines("input4.1.txt")
+    val fileLines2 = readFileLines("input4.1.2.txt")
+    println("Answer: " + Day4.find2(fileLines, fileLines2))
+  }
+
+  "Day4 Part #2 sample" should "return answer" in {
+    val fileLines = readFileLines("sInput4.1.txt")
+    val fileLines2 = readFileLines("sInput4.1.2.txt")
+    println("Answer: " + Day4.find2(fileLines, fileLines2))
+  }
 }
