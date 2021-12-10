@@ -42,7 +42,7 @@ object Day7 {
     (min to max).foreach(i => {
       val fuelForThisIndex = ins
         .map(j => (j - i).abs)
-        .map(k => (1 to k).sum)
+        .map(k => (0 to k).sum)
         .sum
       if (lowestFuel > fuelForThisIndex) {
         lowestFuel = fuelForThisIndex
@@ -61,12 +61,18 @@ object Day7 {
     // 15 min
     // 361, 1001 too low
     val fileLines = FileReader.readFileLines("input7.txt")
+    val time = System.currentTimeMillis()
     println("Final Answer: " + find1(fileLines))
+    val time2 = System.currentTimeMillis() - time
+    println("Time Answer 1: " + time2)
 
     println("Test Answer 2: " + find2(testFileLines))
 
     // 4 min
+    val time3 = System.currentTimeMillis()
     println("Final Answer 2: " + find2(fileLines))
+    val time4 = System.currentTimeMillis() - time3
+    println("Time Answer 2: " + time4)
   }
 
 }

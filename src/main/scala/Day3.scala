@@ -1,3 +1,6 @@
+/**
+ * Day 3: Binary Diagnostic
+ */
 object Day3 {
 
   // needed for sample
@@ -5,9 +8,6 @@ object Day3 {
   // needed for real
   val SIZE = 12
 
-  /** ****** Day 3 Part 1 ********* */
-  /**
-   */
   def find1(in: Array[String]): Int = {
     val gammaBinaryStr = (0 until SIZE).map(i => findGreatest(in, i))
       .mkString("")
@@ -34,9 +34,6 @@ object Day3 {
     if (zeros > ones) "1" else "0"
   }
 
-  /** ****** Day 3 Part 2 ********* */
-  /**
-   */
   def find2(in: Array[String]): Int = {
     val a = findStringWithGreatest(in)
     val b = findStringWithLeast(in)
