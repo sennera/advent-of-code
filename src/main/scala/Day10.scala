@@ -77,7 +77,7 @@ object Day10 {
     sorted.drop(sorted.length / 2).head
   }
 
-  def finishLine(remainingStack: mutable.Stack[Char]): Seq[Char] = {
+  def finishLine(remainingStack: mutable.Stack[Char]): List[Char] = {
     remainingStack.map(validClose(_)).toList
   }
 
